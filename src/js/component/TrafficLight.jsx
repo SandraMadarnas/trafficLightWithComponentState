@@ -22,11 +22,11 @@ const TrafficLight = () => {
 		} else if (selectedColor === 'yellow') {
 			setSelectedColor('green');
 		} else if (selectedColor === 'green') {
+			setSelectedColor('purple');
+		}
+		else if (selectedColor === 'purple') {
 			setSelectedColor('red');
 		}
-		// else if (selectedColor === 'purpple') {
-		// 	setSelectedColor('red');
-		// }
 	}
 
 	const toggleShowPurple = () => {
@@ -34,7 +34,11 @@ const TrafficLight = () => {
 	};
 
 	const apagarLuces = () => {
-		setSelectedColor('none');
+		if (selectedColor === 'none') {
+			setSelectedColor('red');
+		} else {
+			setSelectedColor('none');
+		}
 	};
 
 	return (
@@ -51,7 +55,7 @@ const TrafficLight = () => {
 				<div className="mando">
 					<div className="top">
 						<div className="marca"> TrafficLight </div>
-						<button className="boton power" onClick={apagarLuces} title="Turn Off Light">
+						<button className="boton power" onClick={apagarLuces} title="Turn ON/OFF Lights">
 							<i className="fa fa-power-off fa-2x"></i>
 						</button>
 					</div>
