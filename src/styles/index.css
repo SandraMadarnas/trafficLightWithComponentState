@@ -162,6 +162,13 @@ body {
 }
 
 /* Mando */
+.container-mando{
+  position: absolute;
+  bottom: 100px;
+  left: 10px;
+}
+
+
 .mando {
   position: relative;
   background: #1f1f1f;
