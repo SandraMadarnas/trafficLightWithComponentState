@@ -51,7 +51,7 @@ const TrafficLight = () => {
 				{showPurple && <div onClick={changeColor} className={purple} id="purple"></div>}
 			</div>
 
-			<div className="container container-mando">
+			<div className="container-mando">
 				<div className="mando">
 					<div className="top">
 						<div className="marca"> TrafficLight </div>
